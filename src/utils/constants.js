@@ -54,36 +54,27 @@ export const BENTO_ITEMS = {
 export const FEATURED_PROJECTS = [
   {
     id: 1,
-    title: "Campusync",
-    subtitle: "Student Engagement & Placement Platform",
-    description: "Started as a college project, turned into something we actually deployed. Built the frontend from scratch, wired up the backend APIs, handled auth with JWT, and integrated Cloudinary for file uploads. Learned a lot about RBAC the hard way.",
+    title: "CampusSync",
+    description: "Started as a college idea and slowly became something people actually used. Built the full frontend, wired up REST APIs, handled JWT auth, and integrated Cloudinary for file uploads. Learned a lot about RBAC the hard way — but it shipped, and it works.",
     tags: ["React.js", "Node.js", "MongoDB", "Express.js", "TailwindCSS", "JWT", "Cloudinary"],
-    metrics: "Live ↗",
     githubUrl: "https://github.com/Nazia004/Campus-Fe",
-    githubBackendUrl: "https://github.com/Nazia004/Campus-Be",
     liveUrl: "https://campusync.co.in/"
   },
   {
     id: 2,
     title: "LokTruth",
-    subtitle: "DeepFake Detection — AI Project",
-    description: "Worked on this over 5 months — detecting AI-manipulated media using computer vision. It was my first serious ML project and honestly pretty humbling. Repo and full writeup coming soon.",
+    description: "My first real dive into AI — spent 5 months building a deepfake detection system using computer vision. Honestly pretty humbling. Learned more from the failures than the wins. Repo and writeup coming soon.",
     tags: ["Python", "Computer Vision", "Deep Learning", "AI/ML"],
-    metrics: "Nov 2024 – Mar 2025",
-    githubUrl: "#",
-    liveUrl: "#",
-    comingSoon: true
+    githubUrl: null,
+    liveUrl: null
   },
   {
     id: 3,
-    title: "What's next?",
-    subtitle: "Always building something",
-    description: "I usually have 2–3 things going at once. Check my GitHub to see what I'm currently tinkering with — could be a side tool, a UI experiment, or something I started at 2am.",
-    tags: ["React.js", "Python", "Node.js", "whatever looks interesting"],
-    metrics: "In progress",
-    githubUrl: "https://github.com/aditisingh1027",
-    liveUrl: "#",
-    comingSoon: true
+    title: "Portfolio",
+    description: "This site. Built it to experiment with UI design, animations, and interactions — and to have a place that actually feels like mine. Used React, Vite, TailwindCSS, and Framer Motion. Still tweaking things.",
+    tags: ["React.js", "Vite", "TailwindCSS", "Framer Motion", "React Router"],
+    githubUrl: "https://github.com/aditisingh1027/FUTURE_FS_01",
+    liveUrl: "https://campusync.co.in/"
   }
 ];
 
@@ -119,23 +110,28 @@ export const EXPERIENCE_DATA = [
 
 export const SKILL_CATEGORIES = [
   {
-    title: "Languages",
+    title: "Programming",
     icon: Cpu,
-    skills: ["JavaScript", "Python", "Java", "SQL", "HTML5", "CSS3"]
+    skills: ["Python", "JavaScript", "Java", "SQL"]
   },
   {
-    title: "Frontend",
+    title: "Data & Analytics",
+    icon: Sparkles,
+    skills: ["Pandas", "NumPy", "Power BI", "Excel", "Data Visualization", "Data Cleaning"]
+  },
+  {
+    title: "Web Development",
     icon: Layout,
-    skills: ["React.js", "TailwindCSS", "Material UI", "Bootstrap", "Framer Motion", "Responsive Design"]
+    skills: ["React.js", "TailwindCSS", "HTML5", "CSS3", "Responsive Design"]
   },
   {
-    title: "Backend & Databases",
+    title: "Backend & APIs",
     icon: Database,
-    skills: ["Node.js", "Express.js", "REST APIs", "JWT Auth", "MongoDB", "MySQL", "Cloudinary", "RBAC"]
+    skills: ["Node.js", "Express.js", "FastAPI", "REST APIs", "JWT Auth"]
   },
   {
-    title: "Tools I actually use",
+    title: "Databases & Tools",
     icon: Code2,
-    skills: ["Git", "GitHub", "VS Code", "Postman", "DBMS", "OOPs", "DSA", "API Integration"]
+    skills: ["MongoDB", "MySQL", "Git", "GitHub", "VS Code"]
   }
 ];

@@ -37,16 +37,26 @@ const HeroSection = ({ onOpenResume, theme }) => {
             <span>Open to internships & collaborations</span>
           </div>
 
-          {/* Heading — less rigid line breaks */}
-          <h1 className="text-4xl sm:text-5xl md:text-[3.5rem] font-heading font-bold leading-[1.18] tracking-tight" style={{ color: 'var(--text-primary)' }}>
-            Hi, I'm Aditi —<br />
-            I build things for the <span className="text-gradient">web</span> and<br />
-            explore <span className="text-gradient">AI</span> on the side.
+          {/* Heading */}
+          <h1 className="flex flex-col gap-1 font-heading font-bold tracking-tight">
+            <span
+              className="text-2xl sm:text-3xl font-medium"
+              style={{ color: 'var(--text-muted)' }}
+            >
+              Hello!!
+            </span>
+            <span
+              className="text-4xl sm:text-5xl md:text-[3.25rem] leading-[1.15]"
+              style={{ color: 'var(--text-primary)' }}
+            >
+              This is{' '}
+              <span className="text-gradient">Aditi Kumari Singh.</span>
+            </span>
           </h1>
 
           {/* Subtitle — conversational */}
           <p className="text-base md:text-lg leading-relaxed max-w-lg" style={{ color: 'var(--text-secondary)' }}>
-            CSE student at CV Raman Global University. I like turning ideas into working products — full-stack apps, ML experiments, and the occasional 2am side project.
+            CSE Student at CV Raman Global University. I enjoy taking ideas and turning them into working products — full-stack apps, ML experiments, and the occasional 2am side project.
           </p>
 
           {/* Personal one-liner */}

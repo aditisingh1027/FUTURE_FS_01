@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { FEATURED_PROJECTS } from '../utils/constants';
-import { ExternalLink, Sparkles, Zap, FolderGit2 } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import { GithubIcon } from '../components/icons/BrandIcons';
 
 const FeaturedProjectsSection = ({ theme }) => {
@@ -10,118 +10,114 @@ const FeaturedProjectsSection = ({ theme }) => {
   const tp = { color: 'var(--text-primary)' };
   const ts = { color: 'var(--text-secondary)' };
   const tm = { color: 'var(--text-muted)' };
-  const border = { borderColor: 'var(--border-subtle)' };
 
-  const cardBorder = isDark ? 'border-white/10 hover:border-violet-500/30' : 'border-black/8 hover:border-violet-400/30';
+  const cardBorder = isDark
+    ? 'border-white/10 hover:border-violet-500/25'
+    : 'border-black/8 hover:border-violet-400/25';
+
   const tagClass = isDark
-    ? 'bg-white/5 border-white/10 group-hover:border-white/20'
-    : 'bg-black/5 border-black/8 group-hover:border-black/15';
+    ? 'bg-white/5 border-white/8'
+    : 'bg-black/4 border-black/7';
+
+  const btnGhost = isDark
+    ? 'border-white/10 text-slate-300 hover:border-violet-500/40 hover:text-white hover:bg-violet-500/10'
+    : 'border-black/10 text-slate-600 hover:border-violet-400/40 hover:text-slate-900 hover:bg-violet-50';
 
   return (
-    <section className="py-24 px-6 md:px-12 relative z-10">
-      <div className="max-w-6xl mx-auto flex flex-col gap-12">
+    <section className="py-20 px-5 md:px-10 relative z-10">
+      <div className="max-w-7xl mx-auto flex flex-col gap-14">
 
-        {/* Header */}
-        <div className="flex flex-col items-start gap-2">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}
-            className="flex items-center gap-2 px-3.5 py-1.5 rounded-full glass-panel border-violet-500/30 bg-violet-500/10 text-violet-400 text-xs font-semibold uppercase tracking-wider"
-          >
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Showcase</span>
-          </motion.div>
+        {/* Header — centered, no badge */}
+        <div className="flex flex-col items-center text-center gap-3">
           <motion.h2
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
+            initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }} transition={{ duration: 0.5 }}
             className="text-3xl sm:text-4xl font-heading font-bold tracking-tight" style={tp}
           >
-            Things I've <span className="text-gradient">built</span>
+            Things I've Built
           </motion.h2>
           <motion.p
-            initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-base max-w-lg" style={ts}
+            initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }} transition={{ duration: 0.5, delay: 0.1 }}
+            className="text-base max-w-lg leading-relaxed" style={ts}
           >
-            A mix of team projects, solo experiments, and things I built just to see if I could.
+            A few projects I genuinely enjoyed building, learning from, and occasionally debugging at 2am.
           </motion.p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Cards grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
           {FEATURED_PROJECTS.map((project, index) => (
             <motion.div
               key={project.id}
-              initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.15 }}
-              whileHover={{ y: -4 }}
-              className={`glass-panel rounded-3xl p-8 flex flex-col justify-between gap-8 relative overflow-hidden group shadow-xl ${cardBorder}`}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -5, transition: { duration: 0.25 } }}
+              className={`glass-panel rounded-[1.75rem] p-8 flex flex-col gap-7 relative overflow-hidden group border transition-all shadow-lg ${cardBorder}`}
             >
-              <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-tr from-violet-600/10 to-indigo-600/10 rounded-full blur-3xl group-hover:from-violet-600/20 group-hover:to-indigo-600/20 transition-all pointer-events-none" />
+              {/* Soft background glow — subtle */}
+              <div className="absolute top-0 right-0 w-40 h-40 bg-violet-500/8 rounded-full blur-3xl group-hover:bg-violet-500/14 transition-all pointer-events-none" />
 
-              <div className="flex flex-col gap-6 relative z-10">
-                {/* Top row */}
-                <div className="flex items-center justify-between">
-                  <div className="w-12 h-12 rounded-2xl bg-violet-500/10 border border-violet-500/20 flex items-center justify-center text-violet-400 group-hover:scale-110 group-hover:bg-violet-500/20 transition-all">
-                    <FolderGit2 className="w-6 h-6" />
-                  </div>
-                  <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-500/10 border border-amber-500/20 text-amber-500 text-xs font-mono font-medium">
-                    <Zap className="w-3.5 h-3.5" />
-                    <span>{project.metrics}</span>
-                  </div>
-                </div>
-
-                {/* Title */}
-                <div className="flex flex-col gap-2">
-                  <h3 className="text-2xl font-heading font-bold group-hover:text-violet-400 transition-colors" style={tp}>
-                    {project.title}
-                  </h3>
-                  <span className="text-xs font-semibold text-violet-400 uppercase tracking-wider font-mono">
-                    {project.subtitle}
-                  </span>
-                  <p className="text-sm leading-relaxed mt-2 font-normal" style={ts}>
-                    {project.description}
-                  </p>
-                  {project.comingSoon && (
-                    <span className="inline-flex items-center gap-1.5 text-xs font-mono text-amber-500 mt-1">
-                      <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
-                      Details coming soon
-                    </span>
-                  )}
-                </div>
+              {/* Content */}
+              <div className="flex flex-col gap-4 relative z-10 flex-1">
+                <h3
+                  className="text-xl font-heading font-bold leading-snug group-hover:text-violet-400 transition-colors duration-200"
+                  style={tp}
+                >
+                  {project.title}
+                </h3>
+                <p className="text-sm leading-relaxed" style={ts}>
+                  {project.description}
+                </p>
               </div>
 
-              {/* Bottom */}
-              <div className="flex flex-col gap-6 relative z-10 pt-4" style={{ borderTop: '1px solid var(--border-subtle)' }}>
-                <div className="flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className={`px-2.5 py-1 rounded-xl border text-xs font-medium transition-colors ${tagClass}`} style={ts}>
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+              {/* Tags */}
+              <div className="flex flex-wrap gap-2 relative z-10">
+                {project.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className={`px-2.5 py-1 rounded-lg border text-xs font-medium ${tagClass}`}
+                    style={ts}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
 
-                <div className="flex items-center justify-between pt-2">
-                  {project.githubUrl !== '#' ? (
-                    <a href={project.githubUrl} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-xs font-semibold transition-colors hover:text-violet-400" style={tm}>
-                      <GithubIcon className="w-4 h-4" />
-                      <span>Codebase</span>
-                    </a>
-                  ) : (
-                    <span className="flex items-center gap-2 text-xs font-semibold" style={tm}>
-                      <GithubIcon className="w-4 h-4" />
-                      <span>Coming Soon</span>
-                    </span>
-                  )}
+              {/* Action buttons */}
+              <div
+                className="flex items-center gap-3 pt-5 relative z-10"
+                style={{ borderTop: '1px solid var(--border-subtle)' }}
+              >
+                {project.liveUrl && (
+                  <motion.a
+                    href={project.liveUrl}
+                    target="_blank" rel="noopener noreferrer"
+                    whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
+                    className="flex items-center gap-1.5 px-4 py-2 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 text-white text-xs font-semibold shadow-sm shadow-violet-500/20 hover:shadow-violet-500/35 transition-all"
+                  >
+                    <span>Live Demo</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </motion.a>
+                )}
 
-                  {project.liveUrl !== '#' ? (
-                    <a href={project.liveUrl} target="_blank" rel="noopener noreferrer"
-                      className="flex items-center gap-1.5 text-xs font-semibold text-violet-400 hover:text-violet-300 transition-colors">
-                      <span>Live Demo</span>
-                      <ExternalLink className="w-3.5 h-3.5" />
-                    </a>
-                  ) : (
-                    <span className="text-xs font-semibold" style={tm}>—</span>
-                  )}
-                </div>
+                {project.githubUrl && (
+                  <motion.a
+                    href={project.githubUrl}
+                    target="_blank" rel="noopener noreferrer"
+                    whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}
+                    className={`flex items-center gap-1.5 px-4 py-2 rounded-xl border text-xs font-semibold transition-all ${btnGhost}`}
+                  >
+                    <GithubIcon className="w-3.5 h-3.5" />
+                    <span>Code</span>
+                  </motion.a>
+                )}
+
+                {!project.githubUrl && !project.liveUrl && (
+                  <span className="text-xs italic" style={tm}>Repo & writeup coming soon</span>
+                )}
               </div>
             </motion.div>
           ))}
