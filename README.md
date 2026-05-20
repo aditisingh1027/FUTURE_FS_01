@@ -1,38 +1,49 @@
 # KnowMeMore — Portfolio of Aditi Kumari Singh
 
-A personal portfolio website built with React + Vite. Clean, minimal, and handcrafted.
+A personal portfolio website built with React + Vite — designed to showcase my projects, skills, and the things I enjoy building and learning along the way.
 
-🔗 **Live:** [campusync.co.in](https://campusync.co.in) *(update with your deployed URL)*
+🔗 Live Website: https://knowmemore-beta.vercel.app/
 
 ---
 
 ## About
 
-This is my personal portfolio — built to showcase my projects, skills, experience, and a bit about who I am as a developer.
+This portfolio was built to create a space that feels personal, clean, and reflective of my interests in web development, data analytics, and modern technology.
 
-**Stack:** React · Vite · TailwindCSS · Framer Motion · React Router
+I wanted it to feel less like a generic template and more like something gradually built, improved, broken, redesigned, and rebuilt over time :)
+
+---
+
+## Tech Stack
+
+- React
+- Vite
+- TailwindCSS
+- Framer Motion
+- React Router
 
 ---
 
 ## Pages
 
 | Route | Description |
-|---|---|
+|-------|-------------|
 | `/` | Hero landing page |
 | `/about` | About me, education, skills, experience, certifications |
-| `/projects` | Project showcase with GitHub & live links |
-| `/contact` | Contact form, email, GitHub, LinkedIn, resume |
+| `/projects` | Project showcase with GitHub and live demo links |
+| `/contact` | Contact section, social links, and resume |
 
 ---
 
 ## Features
 
-- Dark / Light mode with smooth transitions
-- Route-based navigation (no scroll links)
-- Resume PDF viewer modal with download
-- Fully responsive — mobile, tablet, desktop
-- Certifications with expandable module dropdown
-- Theme persisted via localStorage
+- Dark / Light mode
+- Responsive design for mobile, tablet, and desktop
+- Animated UI interactions
+- Resume viewer with download option
+- Route-based navigation
+- Certifications section with expandable modules
+- Theme persistence using localStorage
 
 ---
 
@@ -47,7 +58,13 @@ npm run dev
 
 ## Built By
 
-**Aditi Kumari Singh**
-CSE Student · CV Raman Global University · 2027
+Aditi Kumari Singh  
+Computer Science Engineering (Data Science)  
+CV Raman Global University, Bhubaneswar
 
-[GitHub](https://github.com/aditisingh1027) · [LinkedIn](https://www.linkedin.com/in/aditi-kumari-singh-9b8517376/) · [Email](mailto:aaditisingh1027@gmail.com)
+---
+
+## Connect
+
+- Portfolio: https://knowmemore-beta.vercel.app/
+- GitHub: https://github.com/aditisingh1027
