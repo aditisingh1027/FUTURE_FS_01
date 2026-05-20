@@ -1,16 +1,53 @@
-# React + Vite
+# KnowMeMore — Portfolio of Aditi Kumari Singh
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with React + Vite. Clean, minimal, and handcrafted.
 
-Currently, two official plugins are available:
+🔗 **Live:** [campusync.co.in](https://campusync.co.in) *(update with your deployed URL)*
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## About
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+This is my personal portfolio — built to showcase my projects, skills, experience, and a bit about who I am as a developer.
 
-## Expanding the ESLint configuration
+**Stack:** React · Vite · TailwindCSS · Framer Motion · React Router
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## Pages
+
+| Route | Description |
+|---|---|
+| `/` | Hero landing page |
+| `/about` | About me, education, skills, experience, certifications |
+| `/projects` | Project showcase with GitHub & live links |
+| `/contact` | Contact form, email, GitHub, LinkedIn, resume |
+
+---
+
+## Features
+
+- Dark / Light mode with smooth transitions
+- Route-based navigation (no scroll links)
+- Resume PDF viewer modal with download
+- Fully responsive — mobile, tablet, desktop
+- Certifications with expandable module dropdown
+- Theme persisted via localStorage
+
+---
+
+## Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+---
+
+## Built By
+
+**Aditi Kumari Singh**
+CSE Student · CV Raman Global University · 2027
+
+[GitHub](https://github.com/aditisingh1027) · [LinkedIn](https://www.linkedin.com/in/aditi-kumari-singh-9b8517376/) · [Email](mailto:aaditisingh1027@gmail.com)
