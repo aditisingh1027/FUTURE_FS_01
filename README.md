@@ -108,12 +108,3 @@ https://github.com/aditisingh1027
 
 💼 LinkedIn
 https://www.linkedin.com/in/aditi-kumari-singh-9b8517376/
-
-
----
-
-If you want next upgrades, I can also help you with:
-- 🔥 Making your README **stand out like top GitHub portfolios**
-- 🎥 Adding **GIF demo instead of screenshots**
-- 🧠 Writing a **killer LinkedIn post for this exact README**
-- 🚀 Improving your **portfolio SEO so recruiters find you faster**
